@@ -127,7 +127,7 @@ console.log(myObject.0, myObject.class);
 //
 var foo = { bar: 'bar' };
 delete foo.bar;
-console.log();
+console.log('bar' in foo);
 
 //
 
