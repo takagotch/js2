@@ -112,13 +112,22 @@ console.log(cody);
 
 
 //
+var foobarObject = { foobar: 'foobar' };
+var string1 = 'foo';
+var string2 = 'bar';
 
-
-
+console.log(foobarObject[string1 + string2]);
 
 //
+var myObject = { "123":"zero", 'class':'foo' };
+
+console.log(myObject['123'], myObject['class']);
+console.log(myObject.0, myObject.class);
 
 //
+var foo = { bar: 'bar' };
+delete foo.bar;
+console.log();
 
 //
 
