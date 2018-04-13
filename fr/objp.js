@@ -5,6 +5,7 @@ myObject.myFunction = function(){};
 myObject.myArray = [];
 myObject.myString = 'string';
 myObject.myNumber = 33;
+myObject.myDate = new Date();
 
 
 
