@@ -92,10 +92,29 @@ cody.getSex = function(){ return 'Sex= ' + cody.sex };
 var cody = new Object();
 
 cody['living'] = true;
+cody['age'] = 33;
+cody['sex'] = 'male';
+cody['getSex'] = function(){ return cody.sex; };
 
+console.log(
+  cody['living'],
+  cody['age'],
+  cody['sex'],
+  cody['getSex']()
+);  //true 33 'male' 'male'
+
+cody['living'] = false;
+cody['age'] = 99;
+cody['sex'] = 'female';
+cody['getSex'] = function(){ return 'Sex= ' + cody.sex; };
+
+console.log(cody);
 
 
 //
+
+
+
 
 //
 
