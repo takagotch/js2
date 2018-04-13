@@ -130,10 +130,17 @@ delete foo.bar;
 console.log('bar' in foo);
 
 //
+var myArray = [];
+console.log(myArray.foo);
 
 //
+var myArray = [];
+console.log();
 
 //
+var myArray = [];
+console.log();
+
 
 //
 
