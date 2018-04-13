@@ -134,19 +134,50 @@ var myArray = [];
 console.log(myArray.foo);
 
 //
-var myArray = [];
-console.log();
+var myArray = ['foo', 'bar'];
+console.log(myArray.join());
 
 //
-var myArray = [];
-console.log();
-
+var myArray = ['foo', 'bar'];
+console.log(myArray.hasOwnProperty('join'));
   
 //
+myArray = ['foo', 'bar'];
 
+console.log(myArray.toLocaleString());
 
+//
+var myObject = {foo: 'value'};
 
+console.log(myObject.hasOwnProperty('toString'));
 
+//
+var myObject = {foo: 'value'};
+console.log('foo' in myObject);
 
+//
+var myObject = {foo: 'value'};
+console.log('toString' in myObject);
+
+//
+var cody = {
+  age: 33;
+  sex: 'male'
+};
+for(var key in cody){
+  if(cody.hasOwnProperty(key)){
+    console.log(key);
+  }
+}
+
+//
+for (x in window){
+  console.log(x);
+}
+
+//
+for(x in window.document){
+  console.log(x);
+}
 
 
