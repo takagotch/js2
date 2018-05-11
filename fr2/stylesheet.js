@@ -28,6 +28,19 @@ else {
 }
 
 
+
+function disableStylesheet(ss) {
+  if(typeof ss == "number")
+    document.styleSheets[ss].disabled = true;
+  else {
+    var sheets = document.querySelectorAll(ss);
+    for(var i = 0; i < sheets.length; i++)
+      sheets[i].disabled = true;
+  }
+}
+
+var firstRule = document.styleSheets[0].cssRules[0];
+
 document.styleSheets[0].insertRule("str { text-weight: bold; }", 0);
 
 var ss = document.styleSheets[0];
