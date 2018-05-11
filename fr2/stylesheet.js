@@ -28,4 +28,27 @@ else {
 }
 
 
+document.styleSheets[0].insertRule("str { text-weight: bold; }", 0);
+
+var ss = document.styleSheets[0];
+var rules = ss.cssRules?ss.cssRules:ss.rules;
+
+for(var i = 0; i < rules.length; i++){
+  var rule = rules[i];
+  if(!rule.selectorText) continue;
+
+  var selector = rule.selectorText;
+  var ruleText = rule.style.cssText;
+
+  if(selector == "h1"){
+    if (ss.insertRule) ss.insertRule();
+    else if (ss.addRule) ss.addRule("h2", ruleText, rules.length);
+  }
+
+  if(rule.style.textDecoration){
+    if(ss.deleteRule) ss.deleteRule(i);
+    else if(ss.removeRule) ss.removeRule(i);
+    i--;
+  }
+}
 
